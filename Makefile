@@ -5,8 +5,12 @@ dbuild:
 
 .PHONY: run
 run:
-	docker run --rm -it -v $${HOME}/tmp/understand_hello_world_32/:/home/user/hello_world ubuntu32
+	docker run --name hello_ubuntu32 \
+	--rm -it \
+	-v $${HOME}/tmp/understand_hello_world_32/:/home/user/hello_world \
+	-v ~/.vimrc:/root/.vimrc \
+	ubuntu32
 
 .PHONY: enter
 enter:
-	docker exec -it 35fb2972d8eb bash
+	docker exec -it hello_ubuntu32 bash
