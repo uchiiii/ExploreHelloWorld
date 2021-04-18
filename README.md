@@ -1,7 +1,12 @@
 # To Understand "Hello World"
 
 ### environment
+- Linux kernel (Ubuntu)
+- x86 (32 bits)
 - Dockerfile
+
+### System Call
+- https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md#x86-32_bit
 
 ### assembly
 - `gcc hello.c -o hello -Wall -g -O0 -static`
